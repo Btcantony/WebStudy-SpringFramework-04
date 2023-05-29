@@ -42,27 +42,23 @@ public class PageRequestDTO {
 
     private LocalDate to;
 
-    public int getSkip() {
+
+    public int getSkip(){
+
         return (page -1) * 10;
     }
 
 //    public String getLink() {
-//        if (link == null) {
+//        if(link == null){
 //            StringBuilder builder = new StringBuilder();
+//
 //            builder.append("page=" + this.page);
+//
 //            builder.append("&size=" + this.size);
 //            link = builder.toString();
 //        }
 //        return link;
 //    }
-
-    public boolean checkType(String type) {
-
-        if (type == null || types.length == 0){
-            return false;
-        }
-        return Arrays.stream(types).anyMatch(type::equals);
-    }
 
     public String getLink() {
         StringBuilder builder = new StringBuilder();
@@ -99,4 +95,14 @@ public class PageRequestDTO {
 
         return builder.toString();
     }
+
+
+    public boolean checkType(String type){
+
+        if(types == null || types.length == 0){
+            return false;
+        }
+        return Arrays.stream(types).anyMatch(type::equals);
+    }
+
 }
