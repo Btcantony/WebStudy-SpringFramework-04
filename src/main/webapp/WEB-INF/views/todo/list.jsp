@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        <!-- 기존의 <h1>Header</h1>끝 -->
+        <!-- 기존의 <h1>Header</h1>끝ㅇ -->
         <div class="row content">
             <div class="col">
                 <div class="card">
